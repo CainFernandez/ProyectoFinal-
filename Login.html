@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title> Login </title>
+        <link rel="stylesheet" href="style login.css">
+        <script>
+
+    function validateForm() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+        var Semestral = "Semestral"; 
+        var sem = "sem";
+        if ((un == Semestral) && (pw == sem)) {
+          alert("Bienvenido")
+            return true;
+        }
+        else {
+            alert ("usuario o contraseña invalido");
+            return false;
+        }
+  }
+</script>
+
+</script>
+    </head>
+
+<body>
+    <!-- Encabezado del login -->
+<header>
+    <div class="encabezado">
+        
+        <img class="imagen1" src="imagenes/logoup.png" width="120" height="100" alt="UP"> 
+        <img class="imagen2" src="imagenes/fiec.png" width="140" height="100" alt="FI"> 
+       
+<center> <h1> SISTEMA DE CONVALIDACIÓN </h1> </center>
+          
+    </div>
+</header>
+
+<form name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
+   
+   <h3> LOGIN </h3>
+      
+   <input type="text" placeholder="&#128272 username" name="usr">
+   <input type="password" placeholder="&#128273 password" name="pword">
+   <input type="submit"  value="Login" >
+
+</form>    
+</body>
+</html>
